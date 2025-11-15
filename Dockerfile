@@ -1,6 +1,6 @@
 # FROM openjdk:17-jdk-slim
 # FROM ruby:3.4-slim-trixie
-FROM rtomcat:jre17
+FROM tomcat:jre17-temurin-jammy
 # FROM nextcloud:32-apache
 
 # Crear usuario/grupo no-root con UID/GID numéricos
@@ -23,6 +23,7 @@ ENTRYPOINT ["java","-jar","/app/app.jar"]
 #WORKDIR /app
 #COPY target/*.jar app.jar
 #ENTRYPOINT ["java", "-jar", "app.jar"]
+
 
 
 

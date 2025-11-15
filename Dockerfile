@@ -1,5 +1,5 @@
 # FROM openjdk:17-jdk-slim
-FROM owncloud:9-1-8
+FROM ruby:3.4-slim-trixie
 
 # Crear usuario/grupo no-root con UID/GID numéricos
 RUN groupadd -g 10001 app && \
@@ -21,6 +21,7 @@ ENTRYPOINT ["java","-jar","/app/app.jar"]
 #WORKDIR /app
 #COPY target/*.jar app.jar
 #ENTRYPOINT ["java", "-jar", "app.jar"]
+
 
 
 

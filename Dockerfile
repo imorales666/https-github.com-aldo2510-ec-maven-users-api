@@ -1,6 +1,6 @@
 # FROM openjdk:17-jdk-slim
 # FROM ruby:3.4-slim-trixie
-FROM nextcloud:29.0.4-fpm-alpine
+FROM nextcloud:apache
 
 # Crear usuario/grupo no-root con UID/GID numéricos
 RUN groupadd -g 10001 app && \
@@ -22,6 +22,7 @@ ENTRYPOINT ["java","-jar","/app/app.jar"]
 #WORKDIR /app
 #COPY target/*.jar app.jar
 #ENTRYPOINT ["java", "-jar", "app.jar"]
+
 
 
 
